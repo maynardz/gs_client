@@ -1,0 +1,117 @@
+@mixin desktop {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1281px) {
+      @content;
+  }
+}
+
+@mixin sp-landscape {
+  @media screen and (max-width: 926px) and (orientation:  landscape) {
+      @content;
+  }
+}
+
+@mixin sp-portrait {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+      @content;
+  }
+}
+
+@mixin tb-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  @content;
+  }
+}
+
+@mixin tb-landscape {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  @content;
+  }
+}
+
+.partner_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.accm_wrapper {
+  padding: -1em 2em 2em 2em;
+  margin-bottom: 2em;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #425030;
+
+  @include desktop-large {
+      width: 50%;
+  }
+
+  @include sp-portrait {
+      width: 90%;
+  }
+}
+
+.accm_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.accm_logo img {
+  height: 400px;
+
+  @include sp-portrait {
+      height: 300px;
+  }
+
+  @include sp-landscape {
+    height: 350px;
+  }
+
+  @include tb-portrait {
+      height: 350px;
+  }
+}
+
+.accm_blurb {
+  // margin-top: 8em;
+  font-size: 16px;
+  width: 60%;
+  margin: 0 auto;
+  color: #425030;
+
+  @include desktop {
+      margin-top: 0;
+  }
+
+  @include sp-portrait {
+      margin-top: 0;
+  }
+
+  @include sp-landscape {
+      margin-top: 0;
+  }
+}
+
+.accm_blurb p {
+  font-family: untitledSans_regular;
+  text-align: center;
+  
+  @include desktop {
+      text-align: center;
+  }
+
+  @include sp-portrait {
+      text-align: center;
+  }
+
+  @include sp-landscape {
+      text-align: center;
+  }
+}

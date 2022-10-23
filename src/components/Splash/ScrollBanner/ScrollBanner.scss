@@ -1,0 +1,69 @@
+@mixin desktop {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin sp-landscape {
+  @media screen and (max-width: 926px) and (orientation:  landscape) {
+    @content;
+  }
+}
+
+@mixin sp-portrait {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-landscape {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+.banner_small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 50px;
+  padding: 25px 0;
+  overflow-x: hidden;
+}
+
+.banner_content {
+  display: block; /* Important to give the content a width */
+
+  width: 100%;
+  transform: translateX(100%); /* Animation start out of the screen */
+
+  /* Add the animation */
+  animation: move 30s linear infinite; /* infinite make reapeat the animation indefinitely */;
+
+  font-family: domainLight;
+  color: #425030;
+  white-space: nowrap;
+
+  @include sp-portrait {
+    animation: move 10s linear infinite;
+    width: fit-content;
+  }
+}
+
+@keyframes move {
+  to { transform: translateX(-100%); }
+}
