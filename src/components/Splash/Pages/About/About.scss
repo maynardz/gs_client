@@ -92,7 +92,7 @@
 }
 
 .purpose_text {
-  padding: 1em 0 3em 0;
+  padding: 2em 0 3em 0;
 }
 
 .purpose_text h1 {
@@ -108,6 +108,69 @@
   margin: 0 auto;
 
   font-family: untitledSans_regular;
+}
+
+.ceo_wrapper {
+  padding: 2em 2em 2em 2em;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #425030;
+  border-radius: 5px;
+
+  @include sp-portrait {
+      width: 95%;
+  }
+
+  @include sp-landscape {
+      width: 95%;
+  }
+}
+
+.ceo_text h1:nth-child(1) {
+  font-family: domainLight;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.ceo_text h1:nth-child(2) {
+  font-family: domainLight;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  padding-bottom: 0.5em;
+  font-style: italic;
+}
+
+.ceo_text p {
+  font-family: untitledSans_regular;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+} 
+
+.ceo_text h4 {
+  font-family: domainLight;
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+  padding-bottom: 0.5em;
+  // font-style: italic;
+  padding: 1em;
+}
+
+.final_words {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ant-card-head-title {
+  color: #425030;
+  font-family: domainLight;
 }
 
 .ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom, .ant-timeline.ant-timeline-label .ant-timeline-item-head-custom, .ant-timeline.ant-timeline-right .ant-timeline-item-head-custom {

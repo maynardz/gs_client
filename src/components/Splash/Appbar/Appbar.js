@@ -13,6 +13,7 @@ const items = [
       </Link>
     ),
     key: 'about',
+    disabled: true
   },
   {
     label: (
@@ -43,7 +44,7 @@ const Appbar = () => {
   };
 
   return (
-    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} style={{ borderRight: '1px solid #425030', borderLeft: '1px solid #425030' }} />
   )
 };
 

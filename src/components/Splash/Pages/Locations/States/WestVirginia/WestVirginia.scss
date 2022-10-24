@@ -1,0 +1,44 @@
+.wv_addresses {
+  font-size: 16px;
+}
+
+.wv_addresses p {
+  padding: 0 0 3em 0;
+  color: #425030;
+}
+
+.wv_addresses h2 {
+  margin-bottom: 3em;
+  font-family: domainLight;
+  color: #425030;
+  text-decoration: underline solid #ffff78;
+}
+
+.wv_addresses h4 {
+  font-family: domainLight;
+  color: #425030;
+}
+
+.crossLanes_map_trigger {
+  transition: all .2s ease-in-out;
+}
+
+.crossLanes_map_trigger:hover {
+  transform: scale(1.1);
+}
+
+.kanawha_map_trigger {
+  transition: all .2s ease-in-out;
+}
+
+.kanawha_map_trigger:hover {
+  transform: scale(1.1);
+}
+
+.huntington_map_trigger {
+  transition: all .2s ease-in-out;
+}
+
+.huntington_map_trigger:hover {
+  transform: scale(1.1);
+}

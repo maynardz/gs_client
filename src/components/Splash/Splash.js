@@ -21,7 +21,7 @@ const Splash = (props) => {
           <Announcements />
           {/* <ImageScroll /> */}
           <div className='shop_container'>
-            {/* <Shop /> */}
+            <Shop />
           </div>
           <Partners />
         </div>

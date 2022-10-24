@@ -1,0 +1,103 @@
+@mixin desktop {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin sp-landscape {
+  @media screen and (max-width: 926px) and (orientation:  landscape) {
+    @content;
+  }
+}
+
+@mixin sp-portrait {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-landscape {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+.locations_nav nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 5em 0 3em 0;
+}
+
+.locations_nav nav ul li {
+  list-style-type: none;
+  font-family: domainLight;
+  color: #425030;
+  transition: all .2s ease-in-out;
+  padding: 2em 2em 2em 2em;
+}
+
+.locations_nav nav ul li h5 {
+  font-size: 1.6rem;
+  color: #425030;
+}
+
+.locations_nav nav ul li:hover {
+  transform: scale(1.1);
+}
+
+.locations_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  @include sp-portrait {
+      padding: 0 2em 5em 2em;      
+  }
+  
+  @include sp-landscape {
+      padding: 0 2em 5em 2em;
+  }
+
+  @include tb-portrait {
+      padding: 0 2em 5em 2em;      
+  }
+  
+  @include tb-landscape {
+      padding: 0 2em 5em 2em;
+  }
+}
+
+.list_container {
+  padding: 0 0 5em 0;
+  text-align: center;
+
+  @include sp-portrait {
+      padding: 0 0 0 0;      
+  }
+  
+  @include sp-landscape {
+      padding: 0 0 0 0;
+  }
+
+  @include tb-portrait {
+      padding: 0 0 0 0;      
+  }
+  
+  @include tb-landscape {
+      padding: 0 0 0 0;
+  }
+}
