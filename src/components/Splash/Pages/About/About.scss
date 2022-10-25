@@ -203,62 +203,17 @@
   background-image: url('../../../../assets/web/pattern.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 3em;
-
-  @include sp-portrait {
-    display: block;
-  }
-
-  @include sp-landscape {
-    display: block;
-  }
-
-  @include tb-portrait {
-    display: block;
-  }
-
-  @include tb-landscape {
-    display: block;
-  }
-}
-
-.brand_pattern {
-  height: auto;
-  width: 50vw;
-
-  @include sp-portrait {
-    width: 100vw;
-    height: auto;
-  }
-
-  @include sp-landscape {
-    width: 100vw;
-    height: auto;
-  }
-
-  @include tb-portrait {
-    width: 100vw;
-    height: auto;
-  }
-
-  @include tb-landscape {
-    width: 100vw;
-    height: auto;
-  };
 }
 
 .message_text {
-  width: 80%;
   border-radius: 5px;
   border: 1px solid #425030;
   background-color: #f0eae2;
   padding: 2em;
+  width: 95%;
   margin: 0 auto;
-
-  @include sp-portrait {
-    width: 100%;
-  }
 }
 
 .message_text h1 {
@@ -271,7 +226,11 @@
   font-family: untitledSans_regular;
   color: #425030;
   font-size: 16px;
-  margin: 0 auto;
+  width: 80%;
+
+  @include sp-portrait {
+    width: 100%;
+  }
 } 
 
 .message_text h4 {
