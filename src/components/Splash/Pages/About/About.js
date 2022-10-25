@@ -27,6 +27,8 @@ const About = (props) => {
           </div>
         </div>
 
+        {/* <div className='ceo_container'></div> */}
+
         <div className='purpose_boxes'>
           <div className='purpose_box'>
             <img src={AccessoryIcon} alt='Accessory Icon' style={{ height: '150px', width: 'auto', marginBottom: '3em' }} />
@@ -47,40 +49,39 @@ const About = (props) => {
             </p>
           </div>
         </div>
+
+
         <div className='ceo_container'>
-          <img className='brand_pattern' src={BrandPattern} alt='Greene Street brand pattern' />
-          <div className='message_wrapper'>
-            <div className='message_text'>
-              <h1>A Message from Our CEO</h1>
-              <p>When I first envisioned Greene Street, three core questions arose that were, and still are, the driving force behind nearly every decision we make as a business. </p>
-              <div className='ceo_vision_wrapper'>
-                <div className='ceo_vision'>
-                  <p>
-                    1.) Why isn't cannabis integrated into today's healthcare system?
-                  </p>
-                </div>
-                <div className='ceo_vision'>
-                  <p>
-                    2.) Why can't a patient or consumer access a life-changing product and gain insight and knowledge to make decisions for a better wellness outcome?
-                  </p>
-                </div>
-                <div className='ceo_vision'>
-                  <p>
-                    3.) Lastly, and most importantly - how can we help?
-                  </p>
-                </div>
+          <div className='message_text'>
+            <h1>A Message from Our CEO</h1>
+            <p>When I first envisioned Greene Street, three core questions arose that were, and still are, the driving force behind nearly every decision we make as a business. </p>
+            <div className='ceo_vision_wrapper'>
+              <div className='ceo_vision'>
+                <p>
+                  1.) Why isn't cannabis integrated into today's healthcare system?
+                </p>
               </div>
-              <div className='final_words'>
-                <p>We seek to aid our customers along their cannabis journey. We aim to be that positive step in healthcare - which may otherwise be a difficult conversation for a patient or consumer. We believe Greene Street can shine a light on a traditionally stigmatized avenue of achieving wellness and truly make it accessible to all in need.</p>
-                <br />
-                <p>Alexa Wolman</p>
-                <p>CEO</p>
-                <p>Greene Street Cannabis Co.</p>
-              </div>									
+              <div className='ceo_vision'>
+                <p>
+                  2.) Why can't a patient or consumer access a life-changing product and gain insight and knowledge to make decisions for a better wellness outcome?
+                </p>
+              </div>
+              <div className='ceo_vision'>
+                <p>
+                  3.) Lastly, and most importantly - how can we help?
+                </p>
+              </div>
             </div>
+            <div className='final_words'>
+              <p>We seek to aid our customers along their cannabis journey. We aim to be that positive step in healthcare - which may otherwise be a difficult conversation for a patient or consumer. We believe Greene Street can shine a light on a traditionally stigmatized avenue of achieving wellness and truly make it accessible to all in need.</p>
+              <br />
+              <p>Alexa Wolman</p>
+              <p>CEO</p>
+              <p>Greene Street Cannabis Co.</p>
+            </div>									
           </div>
-        </div> 
-    </div>
+        </div>
+      </div> 
   )
 }
 

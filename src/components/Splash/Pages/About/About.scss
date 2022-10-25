@@ -200,7 +200,11 @@
 }
 
 .ceo_container {
-  display: flex;
+  background-image: url('../../../../assets/web/pattern.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 3em;
 
   @include sp-portrait {
     display: block;
@@ -221,7 +225,7 @@
 
 .brand_pattern {
   height: auto;
-  width: 40vw;
+  width: 50vw;
 
   @include sp-portrait {
     width: 100vw;
@@ -244,14 +248,17 @@
   };
 }
 
-.message_wrapper {
-  padding: 3em;
-  border: 1px solid #425030;
-  border-top: none;
-}
-
 .message_text {
   width: 80%;
+  border-radius: 5px;
+  border: 1px solid #425030;
+  background-color: #f0eae2;
+  padding: 2em;
+  margin: 0 auto;
+
+  @include sp-portrait {
+    width: 100%;
+  }
 }
 
 .message_text h1 {
