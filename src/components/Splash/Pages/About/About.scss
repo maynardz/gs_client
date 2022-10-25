@@ -147,6 +147,10 @@
   color: #425030;
   width: 50%;
   margin: 0 auto;
+
+  @include sp-portrait {
+    width: 80%;
+  }
 }
 
 .purpose_text {
