@@ -29,7 +29,7 @@
 }
 
 @mixin tb-landscape {
-  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  @media screen and (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
     @content;
   }
 }
@@ -55,40 +55,98 @@
 }
 
 .about_wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100vw;
-}
+  display: grid;
+  grid-template-columns: 1fr auto;
+  overflow: hidden;
+  border: 1px solid #425030
 
-.about_text_wrapper {
-  padding: 3em 2em 3em 2em;
-  width: 35%;
-
+  // grid-gap: 1rem;
+  // grid-template-columns:  repeat(6, 16vw);
+  // grid-template-rows: repeat(6, 12vh);
+  
+  ;
   @include sp-portrait {
-      width: 95%;
+    display: block;
   }
 
   @include sp-landscape {
-      width: 95%;
+    display: block;
+  }
+
+  @include tb-portrait {
+    display: block;
+  }
+
+  @include tb-landscape {
+    display: block;
+  }
+}
+
+.about_text_wrapper {
+  padding: 3em 3em 3em 3em;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.about_image_container {
+  grid-row: 1/4;
+  grid-column: 5/6;
+}
+
+.aboutImage {
+  height: 80vh;
+  grid-row: 2/5;
+  grid-column: 1/4;
+
+  @include sp-landscape {
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include tb-portrait {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include tb-landscape {
+    display: block;
+    margin: 0 auto;
   }
 }
 
 .about_text h1 {
   font-family: domainLight;
-  font-size: 3rem;
+  font-size: 6rem;
   color: #425030;
   text-align: center;
   padding-bottom: 0.5em;
   text-decoration: underline solid #ffff78;
+
+  @include sp-portrait {
+    font-size: 4rem;
+  }
+
+  @include sp-landscape {
+    font-size: 4rem;
+  }
+
+  @include tb-portrait {
+    font-size: 4rem;
+  }
+
+  @include tb-landscape {
+    font-size: 4rem;
+  }
 }
 
 .about_text p {
   font-family: untitledSans_regular;
   font-size: 16px;
+  text-align: center;
   color: #425030;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .purpose_text {
@@ -103,77 +161,129 @@
   // padding-bottom: 1em;
 }
 
-.timeline_container {
-  width: 80%;
-  margin: 0 auto;
-
-  font-family: untitledSans_regular;
-}
-
-.ceo_wrapper {
-  padding: 2em 2em 2em 2em;
-  margin: 0 auto;
-  width: 50%;
-  background-color: #425030;
-  border-radius: 5px;
+.purpose_boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid #425030;
+  border-top: none;
+  padding: 1em;
 
   @include sp-portrait {
-      width: 95%;
+    display: block;
   }
 
   @include sp-landscape {
-      width: 95%;
+    display: block;
+  }
+
+  @include tb-portrait {
+    display: block;
   }
 }
 
-.ceo_text h1:nth-child(1) {
-  font-family: domainLight;
-  font-size: 2.5rem;
-  color: white;
+.purpose_box {
+  place-self: center;
+  padding: 2em;
   text-align: center;
-  font-style: italic;
 }
 
-.ceo_text h1:nth-child(2) {
-  font-family: domainLight;
-  font-size: 2.5rem;
-  color: white;
-  text-align: center;
-  padding-bottom: 0.5em;
-  font-style: italic;
-}
-
-.ceo_text p {
+.purpose_box p {
   font-family: untitledSans_regular;
-  color: white;
-  text-align: center;
+  color: #425030;
   font-size: 16px;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
-  padding-bottom: 2em;
+}
+
+.ceo_container {
+  display: flex;
+
+  @include sp-portrait {
+    display: block;
+  }
+
+  @include sp-landscape {
+    display: block;
+  }
+
+  @include tb-portrait {
+    display: block;
+  }
+
+  @include tb-landscape {
+    display: block;
+  }
+}
+
+.brand_pattern {
+  height: auto;
+  width: 40vw;
+
+  @include sp-portrait {
+    width: 100vw;
+    height: auto;
+  }
+
+  @include sp-landscape {
+    width: 100vw;
+    height: auto;
+  }
+
+  @include tb-portrait {
+    width: 100vw;
+    height: auto;
+  }
+
+  @include tb-landscape {
+    width: 100vw;
+    height: auto;
+  };
+}
+
+.message_wrapper {
+  padding: 3em;
+  border: 1px solid #425030;
+  border-top: none;
+}
+
+.message_text {
+  width: 80%;
+}
+
+.message_text h1 {
+  font-family: domainLight;
+  font-size: 2.5rem;
+  color: #425030;
+}
+
+.message_text p {
+  font-family: untitledSans_regular;
+  color: #425030;
+  font-size: 16px;
+  margin: 0 auto;
 } 
 
-.ceo_text h4 {
+.message_text h4 {
   font-family: domainLight;
-  font-size: 1.8rem;
-  color: white;
-  text-align: center;
+  font-size: 1.2rem;
+  color: #425030;
   padding-bottom: 0.5em;
-  // font-style: italic;
-  padding: 1em;
 }
 
-.final_words {
-  width: 80%;
-  margin: 0 auto;
+.ceo_vision_wrapper {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 1rem;
+  width: 50%;
+  padding-top: 2em;
+  margin-left: 2em;
+  // text-indent: 2em;
+
+  @include sp-portrait {
+    display: block;
+  }
 }
 
-.ant-card-head-title {
-  color: #425030;
-  font-family: domainLight;
-}
-
-.ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom, .ant-timeline.ant-timeline-label .ant-timeline-item-head-custom, .ant-timeline.ant-timeline-right .ant-timeline-item-head-custom {
-  color: #425030;
-  background-color: #f0eae2;
+.ceo_vision {
+  padding-bottom: 2em;
 }

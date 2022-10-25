@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './Splash.scss';
 
-import ScrollBanner from './ScrollBanner/ScrollBanner';
-import HeroImage from './HeroImage/HeroImage';
+// import ScrollBanner from './ScrollBanner/ScrollBanner';
+import BackgroundImage from './BackgroundImage/BackgroundImage';
 import Appbar from './Appbar/Appbar';
 import Announcements from './Announcements/Announcements';
 // import ImageScroll from './ImageScroll/ImageScroll';
@@ -15,7 +15,7 @@ const Splash = (props) => {
     <div>
       {/* <ScrollBanner /> */}
       <div className='home_container'>
-        <HeroImage />
+        <BackgroundImage />
         <div className='fitted_content'>
           <Appbar />
           <Announcements />

@@ -114,6 +114,7 @@
   color: #425030;
   width: 50%;
   font-size: 16px;
+  font-family: untitledSans_regular;
 
   @include sp-portrait {
     width: 100%;
@@ -159,11 +160,13 @@
 .days {
   margin: 1em;
   font-size: 16px;
+  font-family: untitledSans_regular;
 }
 
 .hours {
   margin: 1em;
   font-size: 16px;
+  font-family: untitledSans_regular;
 }
 
 .hours p {

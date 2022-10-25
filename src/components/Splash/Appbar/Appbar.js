@@ -13,7 +13,7 @@ const items = [
       </Link>
     ),
     key: 'about',
-    disabled: true
+    // disabled: true
   },
   {
     label: (
