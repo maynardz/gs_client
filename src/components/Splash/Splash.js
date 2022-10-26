@@ -9,6 +9,7 @@ import Announcements from './Announcements/Announcements';
 import Partners from './Partners/Partners';
 import Shop from './Shop/Shop';
 
+
 const Splash = (props) => {
 
   return (
