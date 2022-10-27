@@ -39,25 +39,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 3em;
+  padding: 2em;
 }
 
 .heroImage_wrapper {
   background-color: white;
-  padding: 5em;
+  padding: 2em;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .hero_image {
+  display: block;
+  margin: 0 auto;
   height: 400px;
   width: auto;
 
   @include sp-portrait {
-    height: 200px;
+    height: 150px;
     width: auto;
-    padding: 3em;
   }
 }
 
@@ -66,5 +67,9 @@
   color: #425030;
   font-size: 1.8rem;
   padding-top: 1em;
-  margin: 0
+  margin: 0;
+
+  @include sp-portrait() {
+    font-size: 1.2rem;
+  }
 }
