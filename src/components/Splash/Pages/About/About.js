@@ -31,13 +31,13 @@ const About = (props) => {
 
         <div className='purpose_boxes'>
           <div className='purpose_box'>
-            <img src={AccessoryIcon} alt='Accessory Icon' style={{ height: '150px', width: 'auto', marginBottom: '3em' }} />
+            <img src={EnergyIcon} alt='Accessory Icon' style={{ height: '150px', width: 'auto', marginBottom: '3em' }} />
             <p>
               Greene Street's cannabis is all organically grown to the highest standards and is given the utmost level of care from seed to sale.
             </p>
           </div>
           <div className='purpose_box'>
-            <img src={EnergyIcon} alt='Energy Icon' style={{ height: '150px', width: 'auto', marginBottom: '3em' }} />
+            <img src={AccessoryIcon} alt='Energy Icon' style={{ height: '150px', width: 'auto', marginBottom: '3em' }} />
             <p>
               We are a customer-first organization offering our clients premium products and services. We strive to give each individual a one-of-a-kind experience and help them determine what best suits their personal health goals.
             </p>

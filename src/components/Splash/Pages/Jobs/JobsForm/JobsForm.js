@@ -68,7 +68,7 @@ const JobsForm = (props) => {
             message: 'Please input your first name',
           },
         ]}
-        style={{ fontFamily: 'domainLight' }}
+        style={{ fontFamily: 'untitledSans_regular' }}
       >
         <Input onChange={(e) => props.setFirstName(e.target.value)} />
       </Form.Item>
@@ -82,7 +82,7 @@ const JobsForm = (props) => {
             message: 'Please input your last name',
           },
         ]}
-        style={{ fontFamily: 'domainLight' }}
+        style={{ fontFamily: 'untitledSans_regular' }}
       >
         <Input onChange={(e) => props.setLastName(e.target.value)} />
       </Form.Item>
@@ -96,7 +96,7 @@ const JobsForm = (props) => {
             message: 'Please input your email',
           },
         ]}
-        style={{ fontFamily: 'domainLight' }}
+        style={{ fontFamily: 'untitledSans_regular' }}
       >
         <Input onChange={(e) => props.setEmail(e.target.value)} />
       </Form.Item>
@@ -106,7 +106,7 @@ const JobsForm = (props) => {
         labelCol={{
           span: 8
         }}
-        style={{ fontFamily: 'domainLight' }}
+        style={{ fontFamily: 'untitledSans_regular' }}
       >
         <Dragger {...draggerProps} beforeUpload={()=> {
           return false; 
