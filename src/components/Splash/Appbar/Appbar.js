@@ -30,7 +30,7 @@ const items = [
       </Link>
     ),
     key: 'jobs',
-    disabled: true
+    // disabled: true
   },
 ];
 
@@ -44,7 +44,7 @@ const Appbar = () => {
   };
 
   return (
-    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} style={{ borderRight: '1px solid #425030', borderLeft: '1px solid #425030' }} />
+    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
   )
 };
 

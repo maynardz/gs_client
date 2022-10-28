@@ -2,9 +2,9 @@ import React from 'react';
 import './Jobs.scss';
 import APIURL from '../../../helpers/environment';
 
-import { Button, message, Form, Input, Upload } from 'antd';
-import { InboxOutlined } from '@ant-design/icons';
-const { Dragger } = Upload;
+import JobsForm from './JobsForm/JobsForm';
+
+import { Navigate } from 'react-router-dom';
 
 const Jobs = () => {
 
@@ -13,10 +13,7 @@ const Jobs = () => {
 	const [lastName, setLastName] = React.useState('');
 	const [email, setEmail] = React.useState('');
   const [formLayout, setFormLayout] = React.useState('vertical');
-
-  const onFormLayoutChange = ({ layout }) => {
-    setFormLayout(layout);
-  };
+  const [formSuccess, setFormSuccess] = React.useState(false);
 
   const onFinish = (values) => {
     console.log('Success:', values);
@@ -38,37 +35,20 @@ const Jobs = () => {
 			body: formData
 		})
 		.then(res => res.json())
-		.then(() => 
-			setFile(null),
-			setFirstName(''),
-			setLastName(''),
-			setEmail(''),
-		)
+		.then(json => { 
+      if (json.errors) {
+        alert(json.errors[0].message);
+      } else {
+        setFormSuccess(true);
+        setFile(null);
+			  setFirstName('');
+			  setLastName('');
+			  setEmail('');
+        document.getElementById('jobsForm').reset();
+      }
+    })
 		.catch(err => alert(err))
   }
-
-  const props = {
-    name: 'attachment',
-    multiple: false,
-    onChange(info) {
-      setFile(info.file);
-    },
-    onDrop(e) {
-      console.log('Dropped files', e.dataTransfer.files);
-    },
-  };
-  
-  const formItemLayout =
-    formLayout === 'horizontal'
-      ? {
-          labelCol: {
-            span: 4,
-          },
-          wrapperCol: {
-            span: 14,
-          },
-        }
-      : null; 
 
   return (
     <div>
@@ -76,103 +56,18 @@ const Jobs = () => {
         <h1>Join the Team</h1>
       </div>
       <div className='flex_form_wrapper'>
+        <div className='form_text_wrapper'>
+          <div>
+            <h1>Interested in a career at Greene Street?</h1>
+            <p>Provide us with some details + your resume and we'll get in touch!</p>
+          </div>
+        </div>
+        <hr style={{ width: '15%' }} />
         <div className='form_wrapper'>
-          <Form
-            {...formItemLayout}
-            layout={formLayout}
-            name="basic"
-            encType='multipart/form-data'
-            labelCol={{
-              span: 4
-            }}
-            wrapperCol={{
-              span: 18
-            }}
-            initialValues={{
-              remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-          >
-
-            <Form.Item
-              label="First Name"
-              name="first_name"
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input your first name',
-                },
-              ]}
-            >
-              <Input onChange={(e) => setFirstName(e.target.value)} />
-            </Form.Item>
-
-            <Form.Item
-              label="Last Name"
-              name="last_name"
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input your last name',
-                },
-              ]}
-            >
-              <Input onChange={(e) => setLastName(e.target.value)} />
-            </Form.Item>
-
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input your email',
-                },
-              ]}
-            >
-              <Input onChange={(e) => setEmail(e.target.value)} />
-            </Form.Item>
-
-            <Form.Item
-              labelCol={{
-                span: 4
-              }}
-              wrapperCol={{
-                span: 18
-              }}
-            >
-              <Dragger {...props} beforeUpload={()=> {
-                return false; }}>
-                <p className="ant-upload-drag-icon">
-                  <InboxOutlined />
-                </p>
-                <p className="ant-upload-text">Click or drag file to this area to upload</p>
-              </Dragger>
-            </Form.Item>
-
-            <Form.Item
-              labelCol={{
-                span: 4
-              }}
-              wrapperCol={{
-                span: 18
-              }}
-            >
-              <Button 
-                type="primary"
-                onClick={(e) => handleUpload(e)}
-                // loading={uploading}
-                disabled={firstName === "" || lastName === "" || email === ""}
-              >
-                Submit
-              </Button>
-            </Form.Item>
-
-          </Form>
+          <JobsForm handleUpload={handleUpload} file={file} setFile={setFile} firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} email={email} formLayout={formLayout} setEmail={setEmail} onFinish={onFinish} onFinishFailed={onFinishFailed} formSuccess={formSuccess} setFormSuccess={setFormSuccess} />
         </div>
       </div>
+      <div className='ceo_container'></div>
     </div>
   );
 };

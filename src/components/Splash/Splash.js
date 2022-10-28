@@ -103,14 +103,15 @@ const Splash = (props) => {
       <div className='home_container'>
         <BackgroundImage />
         <div className='fitted_content'>
-          <HeroImage />
           <Appbar />
+          <HeroImage />
           <Announcements />
           {/* <ImageScroll /> */}
           <div className='shop_container'>
             <Shop />
           </div>
           <Partners />
+          <div className='ceo_container'></div>
         </div>
       </div>
     </div>

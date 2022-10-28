@@ -34,19 +34,44 @@
   }
 }
 
-.flex_form_wrapper {
-  display: flex;
-  justify-content: center;
+.form_text_wrapper {
+  padding: 2em;
+  text-align: center;
 }
 
-.file_upload {
-  width: 75%;
-  // padding: 5em;
-  // margin: auto;
+.form_text_wrapper h1 {
+  font-family: domainLight;
+  color: #425030;
+  font-size: 3rem;
+}
+
+.form_text_wrapper p {
+  font-family: untitledSans_regular;
+  color:#425030;
+  font-size: 1rem;
+}
+
+.form_wrapper {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.form_wrapper form {
+  width: 50vw !important;
+
+  @include sp-portrait() {
+    width: 90vw !important;
+  }
 }
 
 .ant-col-offset-2 {
   @include sp-portrait {
     margin: 0 !important;
   }
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-drag-icon .anticon {
+  color: #425030 !important;
 }

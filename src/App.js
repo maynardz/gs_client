@@ -19,7 +19,6 @@ function App() {
           <Route path='about' element={ <About /> } />
           <Route path='locations' element={ <Locations /> } />
           <Route path='jobs' element={ <Jobs /> } />
-          {/* <Route path='submission_success' element={ <SubmissionSuccess /> } /> */}
         </Routes>
       </div>
     </div>

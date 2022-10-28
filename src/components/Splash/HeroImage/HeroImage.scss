@@ -43,11 +43,13 @@
 }
 
 .heroImage_wrapper {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.95) ;
   padding: 2em;
   text-align: center;
   width: 90%;
+  height: auto;
   margin: 0 auto;
+  border-radius: 10px 100px / 120px;
 }
 
 .hero_image {
@@ -60,11 +62,17 @@
     height: 150px;
     width: auto;
   }
+
+  @include sp-landscape() {
+    height: 200px;
+    width: auto;
+  }
 }
 
 .heroImage_wrapper p {
   font-family: domainLight;
   color: #425030;
+  letter-spacing: 5px;
   font-size: 1.8rem;
   padding-top: 1em;
   margin: 0;
