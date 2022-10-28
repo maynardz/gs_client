@@ -40,27 +40,6 @@
   height: auto;
 }
 
-.fitted_content {
-  position: absolute;
-  width: 98%;
-  left: 0px;
-  top: 12em;  
-  background-color: #f0eae2;
-  // border: 1px solid #425030;
-
-  @include sp-portrait {
-    width: 100%;
-  }
-
-  @include sp-landscape {
-    width: 100%;
-  }
-
-  @include tb-portrait {
-    width: 100%;
-  }
-}
-
 .shop_container {
   width: 90%;
   margin: 0 auto;

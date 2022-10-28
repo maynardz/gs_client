@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './Splash.scss';   
 
-import BackgroundImage from './BackgroundImage/BackgroundImage';
 import HeroImage from './HeroImage/HeroImage';
 import Appbar from './Appbar/Appbar';
 import Announcements from './Announcements/Announcements';
@@ -99,20 +98,16 @@ const Splash = (props) => {
           </Drawer>
         ) : null
       }
-      {/* <ScrollBanner /> */}
       <div className='home_container'>
-        <BackgroundImage />
-        <div className='fitted_content'>
-          <Appbar />
-          <HeroImage />
-          <Announcements />
-          {/* <ImageScroll /> */}
-          <div className='shop_container'>
-            <Shop />
-          </div>
-          <Partners />
-          <div className='ceo_container'></div>
+        <Appbar />
+        <HeroImage />
+        <Announcements />
+        {/* <ImageScroll /> */}
+        <div className='shop_container'>
+          <Shop />
         </div>
+        <Partners />
+        <div className='ceo_container'></div>
       </div>
     </div>
   )
