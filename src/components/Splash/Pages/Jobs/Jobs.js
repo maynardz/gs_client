@@ -37,6 +37,7 @@ const Jobs = () => {
 		.then(res => res.json())
 		.then(json => { 
       if (json.errors) {
+        console.log(json);
         alert(json.errors[0].message);
       } else {
         setFormSuccess(true);
