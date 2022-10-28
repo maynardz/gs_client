@@ -43,8 +43,27 @@ const Appbar = () => {
     setCurrent(e.key);
   };
 
+  React.useEffect(() => {
+    window.onscroll = () => makeSticky();
+
+    const navbar = document.getElementById('navbar');
+    console.log(navbar);
+    const sticky = navbar.offsetTop;
+    console.log(sticky);
+
+    const makeSticky = () => {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    }
+  }, [])
+
   return (
-    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+    <div id='navbar'>
+      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+    </div>
   )
 };
 

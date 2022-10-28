@@ -99,8 +99,8 @@ const Splash = (props) => {
         ) : null
       }
       <div className='home_container'>
-        <Appbar />
         <HeroImage />
+        <Appbar />
         <Announcements />
         {/* <ImageScroll /> */}
         <div className='shop_container'>
