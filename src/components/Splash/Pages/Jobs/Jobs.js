@@ -23,20 +23,18 @@ const Jobs = () => {
     console.log('Failed:', errorInfo);
   };
 
-  const handleUpload = () => {
+  const handleUpload = (e) => {
+    e.preventDefault();
     const formData = new FormData();
 		formData.append('firstName', firstName);
 		formData.append('lastName', lastName);
 		formData.append('email', email);
     formData.append('attachment', file);
 
-    const requestOptions = {
+    fetch(`${APIURL}/jobs/upload`, {
       method: 'POST',
-      body: formData,
-      // redirect: 'follow'
-    }
-
-    fetch(`${APIURL}/jobs/upload`, requestOptions)
+      body: formData
+    })
 		.then(response => response.text())
 		.then(result => { 
       console.log(result);
