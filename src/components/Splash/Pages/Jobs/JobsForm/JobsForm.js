@@ -50,10 +50,6 @@ const JobsForm = (props) => {
       layout={props.formLayout}
       id="jobsForm"
       name="basic"
-      encType='multipart/form-data'
-      initialValues={{
-        remember: true,
-      }}
       onFinish={props.onFinish}
       onFinishFailed={props.onFinishFailed}
       autoComplete="off"
