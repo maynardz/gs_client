@@ -34,11 +34,11 @@ const Jobs = () => {
 			method: 'POST',
 			body: formData
 		})
-		.then(res => res.json())
-		.then(json => { 
-      console.log(json);
-      if (json.errors) {
-        alert(json.errors[0].message);
+		// .then(res => res.json())
+		.then(res => { 
+      // console.log(res.json());
+      if (res.errors) {
+        alert(res.errors[0].message);
       } else {
         setFormSuccess(true);
         setFile(null);
