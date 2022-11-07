@@ -33,7 +33,7 @@ const Jobs = () => {
     const requestOptions = {
       method: 'POST',
       body: formData,
-      redirect: 'follow'
+      // redirect: 'follow'
     }
 
     fetch(`${APIURL}/jobs/upload`, requestOptions)
