@@ -34,19 +34,15 @@ const Jobs = () => {
 			method: 'POST',
 			body: formData
 		})
-		// .then(res => res.json())
-		.then(res => { 
-      // console.log(res.json());
-      if (res.errors) {
-        alert(res.errors[0].message);
-      } else {
+		.then(res => res.json())
+		.then(json => { 
+      console.log(json);
         setFormSuccess(true);
         setFile(null);
 			  setFirstName('');
 			  setLastName('');
 			  setEmail('');
         document.getElementById('jobsForm').reset();
-      }
     })
 		.catch(err => alert(err))
   }
