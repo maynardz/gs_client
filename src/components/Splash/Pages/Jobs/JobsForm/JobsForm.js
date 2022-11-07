@@ -61,7 +61,7 @@ const JobsForm = (props) => {
 
       <Form.Item
         label="First Name"
-        name="first_name"
+        name="firsName"
         rules={[
           {
             required: true,
@@ -74,8 +74,8 @@ const JobsForm = (props) => {
       </Form.Item>
 
       <Form.Item
-        label="Last Name"
-        name="last_name"
+        label="last Name"
+        name="lastName"
         rules={[
           {
             required: true,
