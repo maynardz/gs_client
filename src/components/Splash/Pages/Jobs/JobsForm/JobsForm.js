@@ -66,11 +66,11 @@ const JobsForm = (props) => {
         ]}
         style={{ fontFamily: 'untitledSans_regular' }}
       >
-        <Input onChange={(e) => props.setFirstName(e.target.value)} />
+        <Input name={props.firstName} onChange={(e) => props.setFirstName(e.target.value)} />
       </Form.Item>
 
       <Form.Item
-        label="last Name"
+        label="Last Name"
         name="lastName"
         rules={[
           {
@@ -80,7 +80,7 @@ const JobsForm = (props) => {
         ]}
         style={{ fontFamily: 'untitledSans_regular' }}
       >
-        <Input onChange={(e) => props.setLastName(e.target.value)} />
+        <Input name={props.lastName} onChange={(e) => props.setLastName(e.target.value)} />
       </Form.Item>
 
       <Form.Item
@@ -94,7 +94,7 @@ const JobsForm = (props) => {
         ]}
         style={{ fontFamily: 'untitledSans_regular' }}
       >
-        <Input onChange={(e) => props.setEmail(e.target.value)} />
+        <Input name={props.email} onChange={(e) => props.setEmail(e.target.value)} />
       </Form.Item>
 
       <Form.Item

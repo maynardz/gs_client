@@ -25,13 +25,14 @@ const Jobs = () => {
 
   const handleUpload = (e) => {
     e.preventDefault();
+
     const formData = new FormData();
 		formData.append('firstName', firstName);
 		formData.append('lastName', lastName);
 		formData.append('email', email);
     formData.append('attachment', file);
 
-    fetch(`${APIURL}/jobs/upload`, {
+    fetch(`${APIURL}/?/jobs/upload`, {
       method: 'POST',
       body: formData
     })
