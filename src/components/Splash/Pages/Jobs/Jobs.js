@@ -44,7 +44,7 @@ const Jobs = () => {
 			  setFirstName('');
 			  setLastName('');
 			  setEmail('');
-        // document.getElementById('jobsForm').reset();
+        document.getElementById('jobsForm').reset();
     })
 		.catch(err => console.log('error', err))
   }
