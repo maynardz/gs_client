@@ -32,7 +32,7 @@ const Jobs = () => {
 		formData.append('email', email);
     formData.append('attachment', file);
 
-    fetch(`${APIURL}/?/jobs/upload`, {
+    fetch(`${APIURL}/jobs/upload`, {
       method: 'POST',
       body: formData
     })
@@ -44,7 +44,7 @@ const Jobs = () => {
 			  setFirstName('');
 			  setLastName('');
 			  setEmail('');
-        document.getElementById('jobsForm').reset();
+        // document.getElementById('jobsForm').reset();
     })
 		.catch(err => console.log('error', err))
   }
