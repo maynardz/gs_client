@@ -5,6 +5,7 @@ import WestVirginia from './States/WestVirginia/WestVirginia';
 import NewMexico from './States/NewMexico/NewMexico';
 import Maine from './States/Maine/Maine';
 import Massachusetts from './States/Massachusetts/Massachusetts';
+import NewJersey from './States/NewJersey/NewJersey';
 
 import { Wrapper } from "@googlemaps/react-wrapper";
 import { createCustomEqual } from "fast-equals";
@@ -16,7 +17,8 @@ const initialState = {
 	location_wv: false,
 	location_nm: false,
 	location_me: false,
-	location_ma: false
+	location_ma: false,
+	location_nj: false
 }
   
 const Locations = (props) => {
@@ -69,6 +71,9 @@ const Locations = (props) => {
 								<li onClick={() => handleUpdate('location_ma')}>
 									<h5>Massachusetts</h5>
 								</li>
+								<li onClick={() => handleUpdate('location_nj')}>
+									<h5>New Jersey</h5>
+								</li>
 							</ul>
 						</nav>
 					</div>
@@ -90,6 +95,9 @@ const Locations = (props) => {
 							}
 							{
 								state.location_ma ? <Massachusetts setCenter={setCenter} setZoom={setZoom} /> : null
+							}
+							{
+								state.location_nj ? <NewJersey setCenter={setCenter} setZoom={setZoom} /> : null
 							}
 						</div>
 						<Wrapper apiKey={api_key} className='map_container'>
