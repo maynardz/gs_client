@@ -50,6 +50,8 @@ const JobsForm = (props) => {
       layout={props.formLayout}
       id="jobsForm"
       name="basic"
+      encType="multipart/form-data"
+      method='POST'
       onFinish={props.onFinish}
       onFinishFailed={props.onFinishFailed}
       autoComplete="off"
@@ -140,7 +142,7 @@ const JobsForm = (props) => {
               span: 4
             }}
           >
-            <Alert message="Success Text" type="success" closable onClose={onClose} />
+            <Alert message="We have received your submission!" type="success" closable onClose={onClose} style={{fontFamily: 'untitledSans_regular'}} />
           </Form.Item>
         ) : null
       }
