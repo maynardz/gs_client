@@ -12,7 +12,11 @@ const Announcements = (props) => {
   return(
     <div>
       <div className='announcement_container'>
-        <h1 style={{ textAlign: 'center', fontFamily: 'DomainLight', color: '#425030'}}>We're pleased to announce the grand opening of our new location in Kanawha City!</h1>
+        <div className='news_header_container'>
+          <h1>News</h1>
+          <hr />
+        </div>
+        <h1 style={{ textAlign: 'center', fontFamily: 'DomainLight', color: '#425030'}}>We're pleased to announce the grand opening of our new location in Kanawha City, West Virginia!</h1>
       </div>
       <div className='card_container'>
         <Card

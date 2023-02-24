@@ -103,8 +103,9 @@ const Splash = (props) => {
         <Appbar />
         {/* <div className="parallax"></div> */}
         <Announcements />
+        <div className="parallax"></div>
         <Partners />
-        <div className='ceo_container'></div>
+        {/* <div className='ceo_container'></div> */}
       </div>
     </div>
   )

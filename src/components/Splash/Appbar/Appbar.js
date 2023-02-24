@@ -27,7 +27,7 @@ const items = [
           {
             label: (
               <Link to='/shop/wv/crosslanes'>
-                Crosslanes
+                Cross Lanes
               </Link>
             ),
             key: 'shop-crosslanes'
@@ -46,7 +46,7 @@ const items = [
   {
     label: (
       <Link to='/'>
-        <img src={smallLeaf} style={{ height: '50px', padding: '0.25em'}} key='image' />
+        <img src={smallLeaf} style={{ height: '45px', padding: '0.25em'}} key='image' />
       </Link>
     )
   },
@@ -78,26 +78,9 @@ const Appbar = () => {
     setCurrent(e.key);
   };
 
-  // React.useEffect(() => {
-  //   window.onscroll = () => makeSticky();
-
-  //   const navbar = document.getElementById('navbar');
-  //   // console.log(navbar);
-  //   const sticky = navbar.offsetTop;
-  //   // console.log(sticky);
-
-  //   const makeSticky = () => {
-  //     if (window.pageYOffset >= sticky) {
-  //       navbar.classList.add('sticky');
-  //     } else {
-  //       navbar.classList.remove('sticky');
-  //     }
-  //   }
-  // }, []);
-
   return (
     <div id='navbar'>
-      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px', backgroundColor: '#d0d2cb' }} />
+      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px', backgroundColor: '#111111' }} />
     </div>
   )
 };

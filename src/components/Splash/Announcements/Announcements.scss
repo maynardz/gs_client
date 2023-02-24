@@ -46,6 +46,16 @@
   margin: 0 auto;
 }
 
+.news_header_container {
+  padding: 2em;
+}
+
+.news_header_container h1 {
+  font-family: domainLight;
+  color: #425030;
+  font-size: 2.4rem;
+}
+
 .card_container {
   padding: 2em;
   display: flex;
@@ -62,7 +72,7 @@
 }
 
 .ant-card-meta-title {
-  font-family: DomainLight !important;
+  font-family: domainLight !important;
   color: #425030 !important;
   font-size: 2rem !important;
 }
@@ -87,5 +97,5 @@
   font-size: 1.2rem !important;
   height: 50px !important;
   border-radius: 5px !important;
-  font-family: DomainLight;
+  font-family: domainLight;
 }

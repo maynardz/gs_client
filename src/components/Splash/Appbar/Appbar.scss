@@ -1,34 +1,60 @@
+@mixin desktop {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin sp-landscape {
+  @media screen and (max-width: 926px) and (orientation:  landscape) {
+    @content;
+  }
+}
+
+@mixin sp-portrait {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin gray-area {
+  @media screen and (min-width: 480px) and (max-width: 725px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-landscape {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
   border-bottom: 2px solid #ffff78 !important;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
-  color: #425030 !important;
-}
-
 .ant-menu-title-content {
   font-family: untitledSans_regular;
-  color: #425030 !important;
+  color: white !important;
+  font-size: 18px;
 }
 
 .ant-menu-title-content a {
   font-family: untitledSans_regular;
-  color: #425030 !important;
+  color: white !important;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.ant-menu-item {
-  font-size: 18px;
-  font-weight: 500;
-  // font-family: untitledSans-regular;
-}
-
-.ant-menu-submenu-title {
-  font-size: 18px;
+.ant-menu-item-group-list .ant-menu-title-content a {
+  color: #111111 !important
 }

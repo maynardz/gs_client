@@ -24,9 +24,10 @@ const Partners = (props) => {
     }
 
     return (
-        <div style={{marginTop: '2em'}}>
+        <div style={{marginTop: '2em', padding: '2em'}}>
             <div className='partners_heading'>
                 <h1>Our Partners</h1>
+                <hr />
             </div>
             <div className='partners_nav'>
                 <nav>
