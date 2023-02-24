@@ -71,4 +71,9 @@
     height: 300px;
     width: 300px;
   }
+
+  @include sp-landscape() {
+    height: 250px;
+    width: 250px;
+  }
 }

@@ -40,22 +40,18 @@
   }
 }
 
+.announcement_container {
+  padding: 4em 2em 0 2em;
+  width: 75%;
+  margin: 0 auto;
+}
+
 .card_container {
   padding: 2em;
   display: flex;
-  justify-content: space-evenly;
-
-  @include tb-portrait() {
-    flex-direction: column;
-  }
-
-  @include gray-area() {
-    flex-direction: column;
-  }
-
-  @include sp-portrait() {
-    flex-direction: column;
-  }
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .button_container {
