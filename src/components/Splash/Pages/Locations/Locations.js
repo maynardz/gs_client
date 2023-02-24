@@ -1,6 +1,8 @@
 import React from 'react';
 import './Locations.scss';
 
+import { LeftOutlined } from '@ant-design/icons';
+
 import WestVirginia from './States/WestVirginia/WestVirginia';
 import NewMexico from './States/NewMexico/NewMexico';
 import Maine from './States/Maine/Maine';
@@ -53,6 +55,9 @@ const Locations = (props) => {
 		<div>
 			<>
 				<div className='header'>
+					<div style={{ position: 'absolute', top: 30, left: 30 }}>
+						<LeftOutlined style={{ color: 'white', fontSize: '30px' }} onClick={() => window.history.back()} />
+					</div>
 					<h1>Locations</h1>
 				</div>
 				<div>

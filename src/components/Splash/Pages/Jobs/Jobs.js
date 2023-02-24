@@ -2,9 +2,11 @@ import React from 'react';
 import './Jobs.scss';
 import APIURL from '../../../helpers/environment';
 
+import { LeftOutlined } from '@ant-design/icons';
+
 import JobsForm from './JobsForm/JobsForm';
 
-import { Navigate } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 
 const Jobs = () => {
 
@@ -52,6 +54,9 @@ const Jobs = () => {
   return (
     <div>
       <div className='header'>
+        <div style={{ position: 'absolute', top: 30, left: 30 }}>
+          <LeftOutlined style={{ color: 'white', fontSize: '30px' }} onClick={() => window.history.back()} />
+        </div>
         <h1>Join the Team</h1>
       </div>
       <div className='flex_form_wrapper'>
