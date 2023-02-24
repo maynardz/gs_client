@@ -45,9 +45,9 @@ const items = [
   },
   {
     label: (
-      <>
+      <Link to='/'>
         <img src={smallLeaf} style={{ height: '50px', padding: '0.25em'}} key='image' />
-      </>
+      </Link>
     )
   },
   {

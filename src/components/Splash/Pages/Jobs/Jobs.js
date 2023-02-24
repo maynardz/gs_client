@@ -1,6 +1,7 @@
 import React from 'react';
 import './Jobs.scss';
 import APIURL from '../../../helpers/environment';
+import Appbar from '../../Appbar/Appbar';
 
 import { LeftOutlined } from '@ant-design/icons';
 
@@ -59,6 +60,7 @@ const Jobs = () => {
         </div>
         <h1>Join the Team</h1>
       </div>
+      <Appbar />
       <div className='flex_form_wrapper'>
         <div className='form_text_wrapper'>
           <div>

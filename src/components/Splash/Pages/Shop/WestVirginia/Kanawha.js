@@ -1,4 +1,5 @@
 import useExternalScripts from "../../../../customHooks/useExternalScripts";
+import Appbar from "../../../Appbar/Appbar";
 
 import { LeftOutlined } from '@ant-design/icons';
 
@@ -14,6 +15,7 @@ const Kanawha = props => {
         </div>
 				<h1>Kanawha</h1>
 			</div>
+      <Appbar />
       <div id="dutchieShop">
 
       </div>

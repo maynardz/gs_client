@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.scss';
+import Appbar from '../../Appbar/Appbar';
 
 import { LeftOutlined } from '@ant-design/icons';
 
@@ -20,6 +21,7 @@ const About = (props) => {
         </div>
         <h1>About Us</h1>
 			</div>
+      <Appbar />
       <div className='about_wrapper'>
         <div className='about_text_wrapper'>
           <div className='about_text'>

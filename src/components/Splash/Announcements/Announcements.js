@@ -23,7 +23,7 @@ const Announcements = (props) => {
           }}
           cover={<img alt="example" src={KC_Store} style={{ height: '100%', width: '100%' }} />}
           >
-          <Meta title="Shop Kanawha City" description="5126 MacCorkle Ave SE, Charleston, WV 25304" />
+          <Meta title="Kanawha City" description="5126 MacCorkle Ave SE, Charleston, WV 25304" />
           <div className='card_button_container'>
             <Button>
               <Link to='/shop/wv/kanawha'>
@@ -41,7 +41,7 @@ const Announcements = (props) => {
           }}
           cover={<img alt="example" src={CL_Store} style={{ height: '100%', width: '100%' }} />}
           >
-          <Meta title="Shop Cross Lanes" description="5126 MacCorkle Ave SE, Charleston, WV 25304" />
+          <Meta title="Cross Lanes" description="5126 MacCorkle Ave SE, Charleston, WV 25304" />
           <div className='card_button_container'>
             <Button>
               <Link to='/shop/wv/crosslanes'>

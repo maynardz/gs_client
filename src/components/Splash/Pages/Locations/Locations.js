@@ -1,5 +1,6 @@
 import React from 'react';
 import './Locations.scss';
+import Appbar from '../../Appbar/Appbar';
 
 import { LeftOutlined } from '@ant-design/icons';
 
@@ -60,6 +61,7 @@ const Locations = (props) => {
 					</div>
 					<h1>Locations</h1>
 				</div>
+				<Appbar />
 				<div>
 					<div className='locations_nav'>
 						<nav>
