@@ -22,6 +22,12 @@
   }
 }
 
+@mixin gray-area {
+  @media screen and (min-width: 480px) and (max-width: 725px) and (orientation: portrait) {
+    @content;
+  }
+}
+
 @mixin tb-portrait {
   @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     @content;
@@ -35,49 +41,34 @@
 }
 
 .heroImage_container {
-  background-image: url('../../../assets/web/pattern.jpg');
-  background-size: cover;
+  background-image: url('../../../assets/web/leavesBox_1920.jpg');
+  // background-attachment: fixed;
+  background-size: cover;                  
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 2em;
+  background-position: center center;
+  height: 100vh;
 }
 
 .heroImage_wrapper {
-  background: rgba(255, 255, 255, 0.95) ;
-  padding: 2em;
   text-align: center;
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 10px 100px / 120px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero_image {
-  display: block;
-  margin: 0 auto;
-  height: 400px;
-  width: auto;
+.gs-logo-svg {
+  width: 650px;
+  height: 650px;
+  min-width: 300px;
 
-  @include sp-portrait {
-    height: 150px;
-    width: auto;
+  @include gray-area() {
+    height: 500px;
+    width: 500px;
   }
-
-  @include sp-landscape() {
-    height: 200px;
-    width: auto;
-  }
-}
-
-.heroImage_wrapper p {
-  font-family: domainLight;
-  color: #425030;
-  letter-spacing: 5px;
-  font-size: 1.8rem;
-  padding-top: 1em;
-  margin: 0;
 
   @include sp-portrait() {
-    font-size: 1.2rem;
+    height: 300px;
+    width: 300px;
   }
 }

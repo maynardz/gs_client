@@ -22,6 +22,12 @@
   }
 }
 
+@mixin gray-area {
+  @media screen and (min-width: 480px) and (max-width: 725px) and (orientation: portrait) {
+    @content;
+  }
+}
+
 @mixin tb-portrait {
   @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     @content;
@@ -34,141 +40,56 @@
   }
 }
 
-.announcements_container {
-  display: grid;
-  overflow: hidden;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-  max-width: 100%;
-
-  @include sp-portrait {
-    display: block;
-  }
-    
-  @include sp-landscape {
-   display: block;
-  } 
-
-  @include tb-portrait {
-    display: block;
-  }
-
-  @include tb-landscape {
-    display: block;
-  }
-}
-
-.container_left {
-  border: 1px solid #425030;
-  border-top: none;
-  border-right: none;
-  height: 100%;
-  padding: 5em;
-
-  @include sp-portrait {
-    border-bottom: none;
-  }
-
-  @include sp-landscape {
-    border-bottom: none;
-   } 
-
-  @include tb-portrait {
-    border-bottom: none;
-  }
-}
-
-.announcement_text {
-  // text-align: center;
-  font-family: domainLight;
-}
-
-.announcement_text h1 {
-  font-size: 7rem;
-  color: #425030;
-  margin: 0;
-
-  @include sp-portrait {
-    font-size: 5rem;
-  }
-
-  @include sp-landscape {
-    font-size: 3rem;
-  }
-
-  @include tb-landscape {
-    font-size: 5rem;
-  }
-
-  @include desktop {
-    font-size: 4rem;
-  }
-
-  @include desktop-large {
-    font-size: 6rem;
-  }
-}
-
-.supporting_text {
-  padding-top: 5em;
-  color: #425030;
-  width: 50%;
-  font-size: 16px;
-  font-family: untitledSans_regular;
-
-  @include sp-portrait {
-    width: 100%;
-  }
-}
-
-.supporting_text p {
-  color: #425030;
-}
-
-.container_right {
-  border: 1px solid #425030;
-  border-top: none;
-  text-align: center;
-  height: 100%;
-  font-family: domainLight;
-  color: #425030;
+.card_container {
+  padding: 2em;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+
+  @include tb-portrait() {
+    flex-direction: column;
+  }
+
+  @include gray-area() {
+    flex-direction: column;
+  }
+
+  @include sp-portrait() {
+    flex-direction: column;
+  }
+}
+
+.button_container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
-
-  @include sp-portrait {
-    border-top: 1px solid #425030;
-  }
-
-  @include sp-landscape {
-    border-top: 1px solid #425030;
-   } 
-
-  @include tb-portrait {
-    border-top: 1px solid #425030;
-  }
+  flex-direction: column;
 }
 
-.container_right h3 {
-  font-size: 3rem;
-  padding-top: 2rem;
-  color: #425030;
+.ant-card-meta-title {
+  font-family: DomainLight !important;
+  color: #425030 !important;
+  font-size: 2rem !important;
 }
 
-.days {
-  margin: 1em;
-  font-size: 16px;
-  font-family: untitledSans_regular;
+.ant-card-meta-description {
+  font-family: untitledSans_regular !important;
+  font-size: 1rem !important;
 }
 
-.hours {
-  margin: 1em;
-  font-size: 16px;
-  font-family: untitledSans_regular;
+.card_button_container {
+  padding: 2em 0 2em 0;
 }
 
-.hours p {
-    color: #425030;
+.button_container .ant-btn {
+  width: 200px !important;
+  margin: 2em !important;
+}
+
+.ant-btn {
+  background-color: #425030 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  height: 50px !important;
+  border-radius: 5px !important;
+  font-family: DomainLight;
 }

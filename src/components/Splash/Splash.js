@@ -6,7 +6,7 @@ import Appbar from './Appbar/Appbar';
 import Announcements from './Announcements/Announcements';
 // import ImageScroll from './ImageScroll/ImageScroll';
 import Partners from './Partners/Partners';
-import Shop from './Shop/Shop';
+// import Shop from './Pages/Shop/Shop';
 
 import { Button, Col, Drawer, Form, Input, Row, Space } from 'antd';
 
@@ -101,11 +101,8 @@ const Splash = (props) => {
       <div className='home_container'>
         <HeroImage />
         <Appbar />
+        {/* <div className="parallax"></div> */}
         <Announcements />
-        {/* <ImageScroll /> */}
-        <div className='shop_container'>
-          <Shop />
-        </div>
         <Partners />
         <div className='ceo_container'></div>
       </div>

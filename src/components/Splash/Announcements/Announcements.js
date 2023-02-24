@@ -1,45 +1,54 @@
 import React from 'react';
 import './Announcements.scss';
+import KC_Store from '../../../assets/web/kanawha_location.jpg'
 
 import { Link } from "react-router-dom";
 
+import { Card, Button } from 'antd';
+const { Meta } = Card;
+
 const Announcements = (props) => {
   return(
-    <div className='announcements_container'>
-      <div className='container_left'>
-        <div className='announcement_text'>
-          <h1>Come Say</h1>
-          <h1>Hello!</h1>
-          <div className='supporting_text'>
-            <p>
-              We are pleased to announce the grand opening of Greene Street Cannabis Co. at <Link to={'/locations'} style={{ textDecoration: 'none', color: '#4c87a1' }}>125 Lakeview Dr in Cross Lanes, West Virginia</Link>. We are committed to bringing our customers expert service and the best available products.
-            </p>
+    <div>
+      <div className='card_container'>
+        <Card
+          hoverable
+          style={{
+            minWidth: '350px',
+            maxWidth: '768px'
+          }}
+          cover={<img alt="example" src={KC_Store} style={{ height: '100%', width: '100%' }} />}
+          >
+          <Meta title="Kanawha City is now open!" description="We are pleased to announce the grand opening of Greene Street Cannabis Co. at 5126 MacCorkle Ave SE, Charleston, WV 25304" />
+          <div className='card_button_container'>
+            <Button>
+              <Link to='/shop/wv/kanawha'>
+                Browse menu
+              </Link>
+            </Button>
           </div>
+        </Card>
+        <div className='button_container'>
+          <Button>
+            <Link to='/shop/wv/crosslanes'>
+              Shop Cross Lanes
+            </Link>
+          </Button>
+          <Button>
+            <Link to='/shop/wv/kanawha'>
+              Shop Kanawha
+            </Link>
+          </Button>
         </div>
       </div>
-      <div className='container_right'>
-        <h3>Store Hours</h3>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
-          <div className='days'>
-            <p>Monday</p>
-            <p>Tuesday</p>
-            <p>Wednesday</p>
-            <p>Thursday</p>
-            <p>Friday</p>
-            <p>Saturday</p>
-            <p>Sunday</p>
-          </div>
-          <div className='hours'>
-            <p>11AM - 8PM</p>
-            <p>11AM - 8PM</p>
-            <p>11AM - 8PM</p>
-            <p>11AM - 8PM</p>
-            <p>11AM - 8PM</p>
-            <p>11AM - 7PM</p>
-            <p>CLOSED</p>
-          </div>
-        </div>
+      {/* <div className="parallax"></div>
+      <div style={{ textAlign: 'center', fontFamily: 'DomainLight' }}>
+        <h1>News</h1>
       </div>
+      <div className='announcements_container'>
+        <div>
+        </div>
+      </div> */}
     </div>
   )
 }

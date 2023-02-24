@@ -40,6 +40,10 @@
   flex-wrap: wrap;
   text-align: center;
   padding: 5em 0 3em 0;
+
+  @include sp-portrait() {
+    flex-direction: column;
+  }
 }
 
 .locations_nav nav ul li {
@@ -51,7 +55,7 @@
 }
 
 .locations_nav nav ul li h5 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #425030;
 }
 
@@ -63,6 +67,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 2em;
 
   @include sp-portrait {
       padding: 0 2em 5em 2em;      
