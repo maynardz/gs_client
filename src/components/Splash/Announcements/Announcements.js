@@ -45,7 +45,7 @@ const Announcements = (props) => {
           }}
           cover={<img alt="example" src={CL_Store} style={{ height: '100%', width: '100%' }} />}
           >
-          <Meta title="Cross Lanes" description="5126 MacCorkle Ave SE, Charleston, WV 25304" />
+          <Meta title="Cross Lanes" description="125 Lakeview Dr, Cross Lanes, WV 25313" />
           <div className='card_button_container'>
             <Button>
               <Link to='/shop/wv/crosslanes'>
