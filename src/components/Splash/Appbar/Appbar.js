@@ -66,15 +66,15 @@ const items = [
     ),
     key: 'jobs',
     // disabled: true
-  },
+  }
 ];
 
-const Appbar = () => {
+const Appbar = (props) => {
 
   const [current, setCurrent] = React.useState('mail');
 
   const onClick = (e) => {
-    console.log('click ', e);
+    // console.log('click ', e);
     setCurrent(e.key);
   };
 

@@ -46,10 +46,6 @@
   margin: 0 auto;
 }
 
-.news_header_container {
-  padding: 2em;
-}
-
 .news_header_container h1 {
   font-family: domainLight;
   color: #425030;
@@ -80,6 +76,7 @@
 .ant-card-meta-description {
   font-family: untitledSans_regular !important;
   font-size: 1rem !important;
+  color: #111111 !important
 }
 
 .card_button_container {
@@ -92,10 +89,15 @@
 }
 
 .ant-btn {
-  background-color: #425030 !important;
-  color: white !important;
+  background-color: #ffff78 !important;
+  color: #111111 !important;
   font-size: 1.2rem !important;
   height: 50px !important;
   border-radius: 5px !important;
   font-family: domainLight;
+  border: none !important;
+}
+
+.ant-btn:hover {
+  transform: scale(1.1);
 }

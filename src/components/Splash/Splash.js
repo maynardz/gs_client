@@ -4,18 +4,25 @@ import './Splash.scss';
 import HeroImage from './HeroImage/HeroImage';
 import Appbar from './Appbar/Appbar';
 import Announcements from './Announcements/Announcements';
-// import ImageScroll from './ImageScroll/ImageScroll';
 import Partners from './Partners/Partners';
-// import Shop from './Pages/Shop/Shop';
+import AdminDrawer from './AdminDrawer/AdminDrawer';
+import Footer from './Footer/Footer';
 
-import { Button, Col, Drawer, Form, Input, Row, Space } from 'antd';
+import Banner from '../../assets/banner.jpg';
 
 const Splash = (props) => {
-
   const [keys, setKeys] = React.useState([]);
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
+    if (localStorage.getItem('token')) {
+      props.setSessionToken(localStorage.getItem('token'))
+    }
+
+    if (localStorage.getItem('user')) {
+      props.setUser(JSON.parse(localStorage.getItem('user')))
+    }
+
     const callback = (e) => {
       // console.log(e);
       setKeys(prevState => [...prevState, e.keyCode]);
@@ -35,7 +42,15 @@ const Splash = (props) => {
     if (toString === '71,83,67,65,78,78,67,79') {
       setOpen(true);
     }
-  }, [keys])
+  }, [keys]);
+
+  const updateLocalStorage = (new_token, user) => {
+    localStorage.setItem('token', new_token);
+    props.setSessionToken(new_token);
+
+    localStorage.setItem('user', JSON.stringify(user));
+    props.setUser(user);
+  }
 
   const onClose = () => {
     setOpen(false);
@@ -46,65 +61,20 @@ const Splash = (props) => {
     <div>
       {
         open ? (
-          <Drawer
-            title="Admin Login"
-            width={720}
-            onClose={onClose}
-            open={open}
-            bodyStyle={{
-              paddingBottom: 80,
-            }}
-            extra={
-              <Space>
-                <Button onClick={onClose}>Cancel</Button>
-                <Button onClick={onClose} type="primary">
-                  Submit
-                </Button>
-              </Space>
-            }
-          >
-            <Form layout="vertical" hideRequiredMark>
-              <Row gutter={16}>
-                <Col span={12}>
-                  <Form.Item
-                    name="name"
-                    label="Username"
-                    rules={[
-                      {
-                        required: true,
-                        message: 'Please enter user name',
-                      },
-                    ]}
-                  >
-                    <Input placeholder="Please enter user name" />
-                  </Form.Item>
-                </Col>
-                <Col span={12}>
-                  <Form.Item
-                    name="password"
-                    label="Password"
-                    rules={[
-                      {
-                        required: true,
-                        message: 'Please enter password',
-                      },
-                    ]}
-                  >
-                    <Input.Password placeholder="Please enter password" />
-                  </Form.Item>
-                </Col>
-              </Row>
-            </Form>
-          </Drawer>
+          <AdminDrawer open={open} setOpen={setOpen} onClose={onClose} setUser={props.setUser} updateLocalStorage={updateLocalStorage} />
         ) : null
       }
       <div className='home_container'>
         <HeroImage />
         <Appbar />
         {/* <div className="parallax"></div> */}
+        <div style={{padding: '1em'}}>
+          <img src={Banner} alt='' style={{width: '100%', height: 'auto'}} />
+        </div>
         <Announcements />
         <div className="parallax"></div>
         <Partners />
+        <Footer />
         {/* <div className='ceo_container'></div> */}
       </div>
     </div>
