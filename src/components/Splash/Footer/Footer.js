@@ -23,7 +23,7 @@ const Footer = props => {
             <p><b>Kanawha</b></p>
             <p>5126 MacCorkle Ave SE, Charleston, WV 25304</p>
             <p>(304) 306-0679</p>      
-
+            <br/>
             <p><b>Cross Lanes</b></p>
             <p>125 Lakeview Dr, Charleston, WV 25313</p>
             <p>(304) 564-6017</p>   

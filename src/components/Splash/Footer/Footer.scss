@@ -75,11 +75,19 @@
 
 .footer-container .image-container {
   display: flex; 
-  justify-content: center;
-}
+  // justify-content: center;
 
-.footer-flexContainer:nth-child(1) p {
-  text-align: center;
+  @include tb-portrait() {
+    justify-content: center;
+  }
+
+  @include gray-area() {
+   justify-content: center;
+  }
+
+  @include sp-portrait() {
+   justify-content: center;
+  };
 }
 
 .footer-container h2 {
