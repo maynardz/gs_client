@@ -45,13 +45,6 @@ const items = [
   },
   {
     label: (
-      <Link to='/'>
-        <img src={smallLeaf} style={{ height: '45px', padding: '0.25em'}} key='image' />
-      </Link>
-    )
-  },
-  {
-    label: (
       <Link to='/locations'>
         Locations
       </Link>
@@ -60,11 +53,27 @@ const items = [
   },
   {
     label: (
+      <Link to='/'>
+        <img src={smallLeaf} style={{ height: '45px', padding: '0.25em'}} key='image' />
+      </Link>
+    )
+  },
+  {
+    label: (
       <Link to='/jobs'>
         Jobs
       </Link>
     ),
     key: 'jobs',
+    // disabled: true
+  },
+  {
+    label: (
+      <Link to='/become-a-patient'>
+        Become a Patient
+      </Link>
+    ),
+    key: 'bap',
     // disabled: true
   }
 ];

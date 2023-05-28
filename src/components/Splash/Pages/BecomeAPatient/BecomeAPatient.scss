@@ -1,0 +1,53 @@
+@mixin desktop {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin sp-landscape {
+  @media screen and (max-width: 926px) and (orientation:  landscape) {
+    @content;
+  }
+}
+
+@mixin sp-portrait {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin gray-area {
+  @media screen and (min-width: 480px) and (max-width: 725px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tb-landscape {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+.patientSignup-info-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2.5em;
+}
+
+.patientSignup-info-container .ant-card-head {
+  background-color: #425030 !important;
+  color: #fff !important;
+}
