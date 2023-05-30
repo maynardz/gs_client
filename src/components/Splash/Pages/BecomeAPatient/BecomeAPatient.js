@@ -28,7 +28,7 @@ const BecomeAPatient = (props) => {
       <br/>
       <br/>
       <br/>
-      <h2 style={{textAlign: 'center', fontFamily: 'domainLight', color: '#425030'}}>How to get a Medicinal Marijuana Card in West Virginia</h2>
+      <h2 style={{textAlign: 'center', fontFamily: 'domainLight', color: '#425030', padding: '1.25em'}}>How to get a Medical Marijuana Card in West Virginia</h2>
       <div className='patientSignup-info-container'>
         <div>
           <Card
