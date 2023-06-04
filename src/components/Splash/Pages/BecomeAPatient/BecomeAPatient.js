@@ -28,7 +28,7 @@ const BecomeAPatient = (props) => {
       <br/>
       <br/>
       <br/>
-      <h2 style={{textAlign: 'center', fontFamily: 'domainLight', color: '#425030', padding: '1.25em'}}>How to get a Medical Marijuana Card in West Virginia</h2>
+      <h2 style={{textAlign: 'center', fontFamily: 'domainLight', color: '#425030', padding: '1.25em'}}>Wondering how to get a Medical Cannabis Card in West Virginia? Follow the 3 easy steps below to get started!</h2>
       <div className='patientSignup-info-container'>
         <div>
           <Card
@@ -51,7 +51,7 @@ const BecomeAPatient = (props) => {
             margin: '1em'
             }}
           >
-            <Meta description="A doctor will determine whether you qualify for a West Virginia medical marijuana card after a quick 10-15 minute evaluation." />
+            <Meta description="A doctor will determine whether you qualify for a West Virginia medical card after a quick 10-15 minute evaluation." />
           </Card>
         </div>
         <div>
