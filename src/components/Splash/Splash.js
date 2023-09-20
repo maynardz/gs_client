@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Splash.scss';   
 
-import HeroImage from './HeroImage/HeroImage';
+// import HeroImage from './HeroImage/HeroImage';
 import Appbar from './Appbar/Appbar';
 import Announcements from './Announcements/Announcements';
 import Partners from './Partners/Partners';

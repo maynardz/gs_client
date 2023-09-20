@@ -2,7 +2,7 @@ import React from 'react';
 import './Appbar.scss';
 
 import Logo from '../../../assets/brand_assets/Logos/RGB/White/PNG/GreeneStreet_WordmarkStacked_RGB_White.png';
-import smallLeaf from '../../../assets/web/small-leaf.png';
+// import smallLeaf from '../../../assets/web/small-leaf.png';
 
 import { Link } from "react-router-dom";
 
