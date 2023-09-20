@@ -65,11 +65,11 @@ const Splash = (props) => {
         ) : null
       }
       <div className='home_container'>
-        <HeroImage />
         <Appbar />
+        {/* <HeroImage /> */}
         {/* <div className="parallax"></div> */}
-        <div style={{padding: '1em', textAlign: 'center'}}>
-          <img src={Banner} alt='' style={{width: '73%', height: 'auto',}} />
+        <div style={{padding: '1em', textAlign: 'center',}}>
+          <img src={Banner} alt='' style={{width: '73%', height: 'auto', borderRadius: 25, marginTop: '5em'}} />
         </div>
         <Announcements />
         <div className="parallax"></div>

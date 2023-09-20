@@ -1,72 +1,84 @@
-import React from 'react';
-import './Announcements.scss';
-import KC_Store from '../../../assets/web/kanawha_location.jpg'
-import CL_Store from '../../../assets/web/crosslanes_location.jpg'
-import KC from '../../../assets/shopcard_kanawha.jpg';
-import CL from '../../../assets/shopcard_crosslanes.jpg';
+import React from "react";
+import "./Announcements.scss";
+
+import EnergyIcon from "../../../assets/brand_assets/Icons/RGB/Green/PNG/Energy/GreeneStreet_Icon_Energy_RGB_Green.png";
+import ReliefIcon from "../../../assets/brand_assets/Icons/RGB/Green/PNG/Relief/GreeneStreet_Icon_Relief6_RGB_Green.png";
+import HeartIcon from "../../../assets/brand_assets/Icons/RGB/Green/PNG/Relief/GreeneStreet_Icon_Relief1_RGB_Green.png";
 
 import { Link } from "react-router-dom";
 
-import { Card, Button } from 'antd';
-const { Meta } = Card;
-
 const Announcements = (props) => {
-  return(
+  return (
     <div>
-      <div className='announcement_container'>
-        <div className='news_header_container'>
-          <h1>Shop</h1>
-          <hr />
-        </div>
-        <h1 style={{fontFamily: 'DomainLight', color: '#425030', fontSize: '20px'}}>To ensure the best possible shopping experience, please select your preferred location from the options below. This will allow us to show you products, prices, and deals that are relevant to your area. Thank you for choosing Greene Street!</h1>
+      <div className="announcement_container">
+        <p>
+          At Greene Street Cannabis Co., our journey in the cannabis industry is
+          guided by a three-fold commitment that defines who we are and what we
+          strive to achieve. We exist to break stigmas and promote education,
+          enhance well-being, and foster community and compassion. These
+          principles are at the core of our mission, driving us to create a
+          space where cannabis enthusiasts and newcomers alike can explore the
+          incredible world of cannabis with confidence and care. Let's dive
+          deeper into each of these pillars that shape our vision for a brighter
+          future in the cannabis industry.
+        </p>
       </div>
-      <div className='card_container'>
-        <Card
-          hoverable
-          style={{
-           width: 350,
-           margin: '1em'
-          }}
-          cover={<img alt="example" src={KC} style={{ height: '100%', width: '100%' }} />}
-          >
-          <Meta description="5126 MacCorkle Ave SE, Charleston, WV 25304" />
-          <div className='card_button_container'>
-            <Button>
-              <Link to='/shop/wv/kanawha'>
-                Browse menu
-              </Link>
-            </Button>
+      <div>
+        <div className="info-container">
+          <div className="text-container">
+            <h1>Breaking Stigmas and Promoting Education</h1>
+            <p>
+              Greene Street Cannabis Co. was founded with a mission to break
+              down the stigmas surrounding cannabis use and to promote
+              education. We believe that through knowledge, understanding, and
+              responsible consumption, individuals can make informed decisions
+              about how cannabis can benefit their lives. Our goal is to be a
+              trusted source of information and guidance, empowering our
+              community to explore the potential of cannabis safely.
+            </p>
           </div>
-        </Card>
-        
-        <Card
-          hoverable
-          style={{
-            width: 350,
-            margin: '1em'
-          }}
-          cover={<img alt="example" src={CL} style={{ height: '100%', width: '100%' }} />}
-          >
-          <Meta description="125 Lakeview Dr, Cross Lanes, WV 25313" />
-          <div className='card_button_container'>
-            <Button>
-              <Link to='/shop/wv/crosslanes'>
-                Browse menu
-              </Link>
-            </Button>
+          <div className="icon-container">
+            <img src={EnergyIcon} alt="" />
           </div>
-        </Card>
-      </div>
-      {/* <div className="parallax"></div>
-      <div style={{ textAlign: 'center', fontFamily: 'DomainLight' }}>
-        <h1>News</h1>
-      </div>
-      <div className='announcements_container'>
-        <div>
         </div>
-      </div> */}
+        <div className="info-container">
+          <div className="icon-container">
+            <img src={ReliefIcon} alt="" />
+          </div>
+          <div className="text-container">
+            <h1>Enhancing Well-Being</h1>
+            <p>
+              Our primary aim is to enhance the well-being of our patients and
+              customers. We are committed to providing access to high-quality
+              cannabis products that can improve the physical, mental, and
+              emotional health of individuals. Whether you seek relief from
+              pain, anxiety, or simply want to elevate your recreational
+              experiences, we're here to help you find the right solutions
+              tailored to your needs.
+            </p>
+          </div>
+        </div>
+        <div className="info-container">
+          <div className="text-container">
+            <h1>Community and Compassion</h1>
+            <p>
+              Greene Street Cannabis Co. is deeply rooted in our local community
+              and driven by compassion. We aim to create a welcoming and
+              inclusive environment where everyone feels valued and supported.
+              Our commitment extends to affordable options for medicinal users,
+              community engagement, and giving back to the communities we serve.
+              We strive to be more than just a dispensary; we aim to be a
+              positive force for change in the cannabis industry, advocating for
+              responsible and equitable practices.
+            </p>
+          </div>
+          <div className="icon-container">
+            <img src={HeartIcon} alt="" />
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Announcements;

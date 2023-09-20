@@ -44,60 +44,62 @@
   padding: 4em 2em 0 2em;
   width: 75%;
   margin: 0 auto;
+
+  p {
+    font-family: 'untitledSans_regular';
+    line-height: 35px;
+    font-size: 18px;
+  }
 }
 
-.news_header_container h1 {
-  font-family: domainLight;
-  color: #425030;
-  font-size: 2.4rem;
-}
-
-.card_container {
-  padding: 2em;
+.info-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
+  padding: 4em 2em 0 2em;
+  width: 75%;
+  margin: 0 auto;
+
+  @include tb-portrait() {
+    flex-direction: column-reverse;
+  }
+
+  @include gray-area() {
+    flex-direction: column;
+  }
+
+  @include sp-portrait() {
+    flex-direction: column;
+  }
+
+  .text-container {
+    flex: 50%;
+    // display: none; 
+    // click icon to start animation to show text and pan out
+    
+    h1 {
+      font-family: 'DomainLight';
+      color: #425030;
+    }
+
+    p {
+      font-family: 'untitledSans_regular';
+      font-size: 16px;
+      line-height: 35px;
+    }
+    // padding: 2em
+  }
+
+  .icon-container {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.button_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.ant-card-meta-title {
-  font-family: domainLight !important;
-  color: #425030 !important;
-  font-size: 2rem !important;
-}
-
-.ant-card-meta-description {
-  font-family: untitledSans_regular !important;
-  font-size: 1rem !important;
-  color: #111111 !important
-}
-
-.card_button_container {
-  padding: 2em 0 2em 0;
-}
-
-.button_container .ant-btn {
-  width: 200px !important;
-  margin: 2em !important;
-}
-
-.ant-btn {
-  background-color: #ffff78 !important;
-  color: #111111 !important;
-  font-size: 1.2rem !important;
-  height: 50px !important;
-  border-radius: 5px !important;
-  font-family: domainLight;
-  border: none !important;
-}
-
-.ant-btn:hover {
-  transform: scale(1.1);
+.icon-container img {
+  height: 200px;
+  background-color: #f3e8da;
+  border-radius: 50%;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Appbar.scss';
-// import wordmark from '../../../assets/brand_assets/Logos/RGB/Green/PNG/GreeneStreet_Monogram_RGB_Green.png';
+
+import Logo from '../../../assets/brand_assets/Logos/RGB/White/PNG/GreeneStreet_WordmarkStacked_RGB_White.png';
 import smallLeaf from '../../../assets/web/small-leaf.png';
 
 import { Link } from "react-router-dom";
@@ -51,13 +52,13 @@ const items = [
     ),
     key: 'locations',
   },
-  {
-    label: (
-      <Link to='/'>
-        <img src={smallLeaf} style={{ height: '45px', padding: '0.25em'}} key='image' />
-      </Link>
-    )
-  },
+  // {
+  //   label: (
+  //     <Link to='/'>
+  //       <img src={smallLeaf} style={{ height: '45px', padding: '0.25em'}} key='image' />
+  //     </Link>
+  //   )
+  // },
   {
     label: (
       <Link to='/jobs'>
@@ -75,6 +76,15 @@ const items = [
     ),
     key: 'bap',
     // disabled: true
+  },
+  {
+    label: (
+      <a href='https://learninggreenehouse.blogspot.com/'>
+        Blog
+      </a>
+    ),
+    key: 'blog',
+    // disabled: true
   }
 ];
 
@@ -89,7 +99,12 @@ const Appbar = (props) => {
 
   return (
     <div id='navbar'>
-      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px', backgroundColor: '#111111' }} />
+      <div className='logo-container'>
+        <img src={Logo} alt='Greene Street Wordmark' />
+      </div>
+      <div className='nav-container'>
+        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}  />
+      </div>
     </div>
   )
 };

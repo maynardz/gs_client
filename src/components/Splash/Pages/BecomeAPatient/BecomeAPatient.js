@@ -32,19 +32,21 @@ const BecomeAPatient = (props) => {
       <div className='patientSignup-info-container'>
         <div>
           <Card
-            title='1. Schedule an Appointment'
+            title='Schedule an Appointment'
             style={{
             width: 350,
             height: 275,
             margin: '1em'
             }}
           >
-            <Meta description="Schedule by selecting a date and time and filling out the form below to set up your West Virginia medical card consultation over the phone. We offer same-day appointments, so you can be seen by a doctor within 15 minutes of scheduling!" />
+            <Meta description="For information regarding appointment availability at our weekly certification events contact 304-306-0679 or email bri.moore@dreamgreene.com." />
+            <br />
+            <Meta description="For information regarding appointment availability at our weekly certification events contact 304-306-0679 or email bri.moore@dreamgreene.com." />
           </Card>
         </div>
         <div>
           <Card
-            title='2. Meet with a Doctor'
+            title='Meet with a Doctor'
             style={{
             width: 350,
             height: 275,
@@ -56,7 +58,7 @@ const BecomeAPatient = (props) => {
         </div>
         <div>
           <Card
-            title='3. Get Approved'
+            title='Wait Time'
             style={{
             width: 350,
             height: 275,
@@ -75,7 +77,7 @@ const BecomeAPatient = (props) => {
             </div>
           )
         }
-        <iframe onLoad={ () => handleChange()} className='iF' src="https://app.acuityscheduling.com/schedule.php?owner=14858346&appointmentType=47359585" frameBorder="0" height='800' width='100%' style={loaded ? {height: '800', width: '100%'} : {display: 'none'}}></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+        {/* <iframe onLoad={ () => handleChange()} className='iF' src="https://app.acuityscheduling.com/schedule.php?owner=14858346&appointmentType=47359585" frameBorder="0" height='800' width='100%' style={loaded ? {height: '800', width: '100%'} : {display: 'none'}}></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script> */}
       </div>
     </div>
   )

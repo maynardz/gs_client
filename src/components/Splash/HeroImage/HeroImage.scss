@@ -41,12 +41,13 @@
 }
 
 .heroImage_container {
-  background-image: url('../../../assets/web/leavesBox_1920.jpg');
+  // background-image: url('../../../assets/web/leavesBox_1920.jpg');
   // background-attachment: fixed;
   background-size: cover;                  
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
+  height: 40vh;
+  background-color: #425030;
 }
 
 .heroImage_wrapper {
