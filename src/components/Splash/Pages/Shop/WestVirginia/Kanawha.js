@@ -1,7 +1,7 @@
 import useExternalScripts from "../../../../customHooks/useExternalScripts";
 import Appbar from "../../../Appbar/Appbar";
 
-import { LeftOutlined } from '@ant-design/icons';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const Kanawha = props => {
 
@@ -9,13 +9,13 @@ const Kanawha = props => {
 
   return (
     <div>
+      <Appbar />
       <div className='header'>
-        <div style={{ position: 'absolute', top: 30, left: 30 }}>
-          <LeftOutlined style={{ color: 'white', fontSize: '30px' }} onClick={() => window.history.back()} />
+        <div style={{ position: 'absolute', top: 100, left: 30 }}>
+          <ArrowBackIosIcon style={{ color: '#425030', fontSize: '30px' }} onClick={() => window.history.back()} />
         </div>
 				<h1>Kanawha</h1>
 			</div>
-      <Appbar />
       <div id="dutchieShop">
 
       </div>

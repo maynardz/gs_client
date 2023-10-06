@@ -8,7 +8,7 @@ const initialState = {
 }
 
 const Partners = (props) => {
-
+    console.log(props);
     const [partners, setPartners] = React.useState(initialState);
 
     React.useEffect(() => {
@@ -26,7 +26,9 @@ const Partners = (props) => {
     return (
         <div style={{marginTop: '2em', padding: '2em'}}>
             <div className='partners_heading'>
-                <h1>Our Partners</h1>
+                <h1 sx={{
+                    color: props.theme.palette.mode === "light" ? "#425030" : "ffff78"
+                }}>Our Partners</h1>
                 <hr />
             </div>
             <div className='partners_nav'>
@@ -35,15 +37,6 @@ const Partners = (props) => {
                         <li onClick={() => handleUpdate('partner_accm') }>
                             <h5>ACCM</h5>
                         </li>
-                        {/* <li onClick={() => handleUpdate('location_nm') }>
-                            <h5>New Mexico</h5>
-                        </li>
-                        <li onClick={() => handleUpdate('location_me')}>
-                            <h5>Maine</h5>
-                        </li>
-                        <li onClick={() => handleUpdate('location_ma')}>
-                            <h5>Massachusetts</h5>
-                        </li> */}
                     </ul>
                 </nav>
             </div>

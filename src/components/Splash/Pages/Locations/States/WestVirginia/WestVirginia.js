@@ -1,7 +1,7 @@
 import React from 'react';
 import './WestVirginia.scss';
 
-import { Tooltip } from 'antd';
+// import { Tooltip } from 'antd';
 
 import api_key from '../../../../../helpers/google';
 
@@ -54,24 +54,24 @@ const WestVirginia = (props) => {
         <div className='wv_addresses'>
             <h2>West Virginia</h2>
             <div className='crossLanes_map_trigger' onClick={() => fetchCrossLanes()}>
-                <Tooltip title="view on map">
+                {/* <Tooltip title="view on map"> */}
                     <h4>Cross Lanes</h4>
                     <p>125 Lakeview Dr, Cross Lanes, WV 25313</p>
-                </Tooltip>
+                {/* </Tooltip> */}
             </div>
             <br />
             <div className='kanawha_map_trigger' onClick={() => fetchKanawha()}>
-                <Tooltip title="view on map">
+                {/* <Tooltip title="view on map"> */}
                     <h4>Kanawha</h4>
                     <p>5126 MacCorkle Ave SE, Charleston, WV 25304</p>
-                </Tooltip>
+                {/* </Tooltip> */}
             </div>
             <br />
             <div className='huntington_map_trigger' onClick={() => fetchHuntington()}>
-                <Tooltip title="view on map">
+                {/* <Tooltip title="view on map"> */}
                     <h4>Huntington</h4>
                     <p>514 20th St, Huntington, WV 25703</p>
-                </Tooltip>
+                {/* </Tooltip> */}
             </div>
         </div>
     )

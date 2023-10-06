@@ -3,13 +3,13 @@ import './Jobs.scss';
 import APIURL from '../../../helpers/environment';
 import Appbar from '../../Appbar/Appbar';
 
-import { LeftOutlined } from '@ant-design/icons';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import JobsForm from './JobsForm/JobsForm';
 
 // import { Navigate } from 'react-router-dom';
 
-const Jobs = () => {
+const Jobs = (props) => {
 
   const [file, setFile] = React.useState(null);
 	const [firstName, setFirstName] = React.useState('');
@@ -54,13 +54,13 @@ const Jobs = () => {
 
   return (
     <div>
+      <Appbar colorMode={props.colorMode} theme={props.theme} />
       <div className='header'>
-        <div style={{ position: 'absolute', top: 30, left: 30 }}>
-          <LeftOutlined style={{ color: 'white', fontSize: '30px' }} onClick={() => window.history.back()} />
+        <div style={{ position: 'absolute', top: 100, left: 30 }}>
+          <ArrowBackIosIcon style={{ color: '#425030', fontSize: '30px' }} onClick={() => window.history.back()} />
         </div>
         <h1>Join the Team</h1>
       </div>
-      <Appbar />
       <div className='flex_form_wrapper'>
         <div className='form_text_wrapper'>
           <div>

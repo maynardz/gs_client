@@ -2,7 +2,7 @@ import React from 'react';
 import './Locations.scss';
 import Appbar from '../../Appbar/Appbar';
 
-import { LeftOutlined } from '@ant-design/icons';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import WestVirginia from './States/WestVirginia/WestVirginia';
 import NewMexico from './States/NewMexico/NewMexico';
@@ -55,13 +55,13 @@ const Locations = (props) => {
 	return (
 		<div>
 			<>
+				<Appbar colorMode={props.colorMode} theme={props.theme} />
 				<div className='header'>
-					<div style={{ position: 'absolute', top: 30, left: 30 }}>
-						<LeftOutlined style={{ color: 'white', fontSize: '30px' }} onClick={() => window.history.back()} />
+					<div style={{ position: 'absolute', top: 100, left: 30 }}>
+						<ArrowBackIosIcon style={{ color: '#425030', fontSize: '30px' }} onClick={() => window.history.back()} />
 					</div>
 					<h1>Locations</h1>
 				</div>
-				<Appbar />
 				<div>
 					<div className='locations_nav'>
 						<nav>
@@ -112,7 +112,7 @@ const Locations = (props) => {
 								center={center}
 								onIdle={onIdle}
 								zoom={zoom}
-								style={{ height: '500px', width: '900px', }}
+								style={{ height: '500px', width: '800px', }}
 							>
 								<Marker position={latLng_values} />
 							</Map>

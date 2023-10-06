@@ -2,13 +2,20 @@ import React from 'react';
 import './Footer.scss';
 
 import WordmarkStacked from '../../../assets/brand_assets/Logos/RGB/White/PNG/GreeneStreet_WordmarkStacked_RGB_White.png';
-import { Button } from 'antd';
-import { FacebookFilled } from '@ant-design/icons';
-import { InstagramOutlined } from '@ant-design/icons';
+
+import Box from "@mui/material/Box";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = props => {
+  console.log(props);
   return (
-    <div>
+    <Box
+      sx={{
+        backgroundColor: props.theme.palette.mode === 'light' ? "#425030" : "#121212",
+        backgroundImage: props.theme.palette.mode === 'light' ? undefined : "linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))"
+      }}
+    >
       <div className='footer-container'>
         <div className='footer-flexContainer'>
           <div className='image-container'>
@@ -47,13 +54,21 @@ const Footer = props => {
             <h2>Socials</h2>
             <div className='underline'></div>
             <div className='icon-container'>
-              <span><a href='https://www.facebook.com/profile.php?id=100092253097996' style={{color: 'inherit'}}><FacebookFilled style={{fontSize: '24px'}} /></a></span>
-              <span><a href='https://www.instagram.com/greenestreetwv/' style={{color: 'inherit'}}><InstagramOutlined style={{fontSize: '24px'}} /></a></span>
+              <span>
+                <a href='https://www.facebook.com/profile.php?id=100092253097996' style={{color: 'inherit'}}>
+                  <FacebookIcon />
+                </a>
+              </span>
+              <span>
+                <a href='https://www.instagram.com/greenestreetwv/' style={{color: 'inherit'}}>
+                  <InstagramIcon />
+                </a>
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Box>
   )
 }
 

@@ -23,7 +23,7 @@
 }
 
 @mixin gray-area {
-  @media screen and (min-width: 480px) and (max-width: 725px) and (orientation: portrait) {
+  @media screen and (min-width: 480px) and (max-width: 768px) and (orientation: portrait) {
     @content;
   }
 }
@@ -40,66 +40,67 @@
   }
 }
 
-.announcement_container {
-  padding: 4em 2em 0 2em;
-  width: 75%;
-  margin: 0 auto;
-
-  p {
-    font-family: 'untitledSans_regular';
-    line-height: 35px;
-    font-size: 18px;
-  }
+.timeline-icon {
+  height: 75px;
+  width: auto;
 }
 
-.info-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 4em 2em 0 2em;
-  width: 75%;
+.landing-wrapper {
   margin: 0 auto;
+  margin-bottom: 2em;
 
-  @include tb-portrait() {
-    flex-direction: column-reverse;
-  }
-
-  @include gray-area() {
-    flex-direction: column;
-  }
-
-  @include sp-portrait() {
-    flex-direction: column;
-  }
-
-  .text-container {
-    flex: 50%;
-    // display: none; 
-    // click icon to start animation to show text and pan out
-    
-    h1 {
-      font-family: 'DomainLight';
-      color: #425030;
-    }
-
-    p {
-      font-family: 'untitledSans_regular';
-      font-size: 16px;
-      line-height: 35px;
-    }
-    // padding: 2em
-  }
-
-  .icon-container {
-    flex: 50%;
+  .heading-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    padding: 2em;
+    // background-color: aqua;
+
+    .prim-logo {
+      height: auto;
+      width: 500px;
+      margin-bottom: 2em;
+
+      @include gray-area() {
+        height: auto;
+        width: 425px;
+      }
+
+      @include sp-portrait() {
+        height: auto;
+        width: 325px;
+      }
+    }
+
+    .prim-blurb {
+      text-align: center;
+      width: 75%;
+      font-size: 18px;
+      font-family: 'untitledSans_regular';
+      line-height: 35px;
+      color: #111111;
+
+      @include gray-area() {
+        width: 90%;
+      }
+
+      @include sp-portrait() {
+        width: 100%;
+      }
+    }
+  }
+
+  .timeline-container {
+    background-color: #425030;
+    padding: 2em;
   }
 }
 
-.icon-container img {
-  height: 200px;
-  background-color: #f3e8da;
-  border-radius: 50%;
-}
+// .acc-icon {
+//   height: 200px;
+//   width: auto;
+//   padding: 1em;
+// }

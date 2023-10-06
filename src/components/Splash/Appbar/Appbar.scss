@@ -40,57 +40,8 @@
   }
 }
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #111111;
-  padding: 2em;
-
-  .logo-container {
-    flex: 25%;
-
-    img {
-      height: auto;
-      width: 100px;
-    };
-  }
-
-  .nav-container {
-    flex: 75%;
-    width: 100%;
-  }
-
-}
-
-.ant-menu {
-  background-color: #111111;
-  border-bottom: none;
-}
-
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
-  border-bottom: 2px solid #ffff78 !important;
-}
-
-.ant-menu-title-content {
-  font-family: untitledSans_regular;
-  color: white !important;
-  font-size: 18px;
-}
-
-.ant-menu-title-content a {
-  font-family: untitledSans_regular;
-  color: white !important;
-}
-
-.ant-menu-item-group-list .ant-menu-title-content a {
-  color: #111111 !important
-}   
-
-.anticon-ellipsis {
-  color: white !important;
-}
-
-.ant-menu-submenu-popup .ant-menu-title-content a {
-  color: black !important
+.nav-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 1em;
 }
